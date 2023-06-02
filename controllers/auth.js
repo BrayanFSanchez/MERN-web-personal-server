@@ -33,7 +33,7 @@ const login = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email) res.status(400).send({ msg: "El email es obligatorio" });
-  if (!password) res.status(400).send({ msg: "La constraseña es obligatorio" });
+  if (!password) res.status(400).send({ msg: "La constraseña es obligatoria" });
 
   const emailLowerCase = email.toLowerCase();
 
