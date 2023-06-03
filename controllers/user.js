@@ -50,8 +50,34 @@ const createUser = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  const { id } = req.params;
+  const userData = req.body;
+
+  if (userData.password) {
+    const salt = bcrypt.genSaltSync(10);
+    const hasPassword = bcrypt.hashSync(userData.password, salt);
+    userData.password = hasPassword;
+  } else {
+    delete userData.password;
+  }
+
+  if (req.files.avatar) {
+    const imagePath = image.getFilePath(req.files.avatar);
+    userData.avatar = imagePath;
+  }
+
+  try {
+    await User.findByIdAndUpdate({ _id: id }, userData);
+    res.status(200).send({ msg: "Actualización correcta" });
+  } catch (error) {
+    res.status(400).send({ msg: "Error al actualizar usuario" });
+  }
+};
+
 module.exports = {
   getMe,
   getUsers,
   createUser,
+  updateUser,
 };
