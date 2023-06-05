@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
-const {
-  DB_USER,
-  DB_PASSWORD,
-  DB_HOST,
-  IP_SERVER,
-  API_VERSION,
-} = require("./constants");
+require("dotenv").config();
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_HOST = process.env.DB_HOST;
+const API_VERSION = process.env.API_VERSION;
+const IP_SERVER = process.env.IP_SERVER;
+// const {
+//   DB_USER,
+//   DB_PASSWORD,
+//   DB_HOST,
+//   IP_SERVER,
+//   API_VERSION,
+// } = require("./constants");
 const app = require("./app");
 
 const DB_URI = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/?retryWrites=true&w=majority`;

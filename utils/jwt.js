@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET_KEY } = require("../constants");
+const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
+// const { JWT_SECRET_KEY } = require("../constants");
 
 const createAccessToken = (user) => {
   const expToken = new Date();
