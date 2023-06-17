@@ -75,9 +75,21 @@ const updateUser = async (req, res) => {
   }
 };
 
+const deleteUser = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await User.findByIdAndDelete(id);
+    res.status(200).send({ msg: "Usuario eliminado" });
+  } catch (error) {
+    res.status(400).send({ msg: "Error al emliminar el usuario" });
+  }
+};
+
 module.exports = {
   getMe,
   getUsers,
   createUser,
   updateUser,
+  deleteUser,
 };
