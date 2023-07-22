@@ -36,24 +36,24 @@ APIs represent sets of endpoints that provide functionality and enable communica
 
 ## Dependencies and requirements
 
-bcryptjs: Version 2.4.3. This library provides hashing and password verification functions to aid in authentication security.
+* bcryptjs: Version 2.4.3. This library provides hashing and password verification functions to aid in authentication security.
 
-body-parser: Version 1.20.2. This middleware allows parsing and extracting data from the body of HTTP requests, facilitating access to parameters and data sent by clients.
+* body-parser: Version 1.20.2. This middleware allows parsing and extracting data from the body of HTTP requests, facilitating access to parameters and data sent by clients.
 
-connect-multiparty: Version 2.2.0. This middleware is used to handle multiparty form data, such as file uploads in HTTP requests.
+* connect-multiparty: Version 2.2.0. This middleware is used to handle multiparty form data, such as file uploads in HTTP requests.
 
-cors: Version 2.8.5. This middleware allows the configuration of HTTP headers to allow or restrict Cross-Origin Resource Sharing (CORS) requests between different domains.
+* cors: Version 2.8.5. This middleware allows the configuration of HTTP headers to allow or restrict Cross-Origin Resource Sharing (CORS) requests between different domains.
 
-dotenv: Version 16.1.4. This library loads environment variables from an .env file to facilitate the configuration of your application in different environments.
+* dotenv: Version 16.1.4. This library loads environment variables from an .env file to facilitate the configuration of your application in different environments.
 
-express: Version 4.18.2. Express is a fast and minimalistic web framework for Node.js that allows you to handle HTTP routes, requests and responses easily and efficiently.
+* express: Version 4.18.2. Express is a fast and minimalistic web framework for Node.js that allows you to handle HTTP routes, requests and responses easily and efficiently.
 
-jsonwebtoken: Version 9.0.0. This library is used to generate and verify authentication tokens based on JSON Web Tokens (JWT), which is useful for implementing authentication and authorization in your application.
+* jsonwebtoken: Version 9.0.0. This library is used to generate and verify authentication tokens based on JSON Web Tokens (JWT), which is useful for implementing authentication and authorization in your application.
 
-mongoose: Version 7.2.2. Mongoose is an object modeling library for Node.js that provides a simple, schema-based interface for interacting with a MongoDB database.
+* mongoose: Version 7.2.2. Mongoose is an object modeling library for Node.js that provides a simple, schema-based interface for interacting with a MongoDB database.
 
-mongoose-paginate: Version 5.0.3. This Mongoose extension adds pagination functions to database queries, which is useful when you need to split results into pages.
+* mongoose-paginate: Version 5.0.3. This Mongoose extension adds pagination functions to database queries, which is useful when you need to split results into pages.
 
 ### The development dependencies (devDependencies) are:
 
-nodemon: Version 2.0.22. Nodemon is a tool that automatically restarts the Node.js server when it detects changes in the project files, which is useful during development to speed up the testing and debugging process.
+* nodemon: Version 2.0.22. Nodemon is a tool that automatically restarts the Node.js server when it detects changes in the project files, which is useful during development to speed up the testing and debugging process.
